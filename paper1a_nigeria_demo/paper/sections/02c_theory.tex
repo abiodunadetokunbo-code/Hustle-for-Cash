@@ -1,0 +1,199 @@
+%% Section 4: Theoretical Framework
+
+\section{Theoretical Framework}
+\label{sec:theory}
+
+This section develops a formal model of enterprise behaviour under a cash
+supply shock to derive testable predictions. The framework embeds heterogeneous
+payment technologies into a cash-in-advance (\textsc{cia}) model of \citet{lucas1987money}.
+
+\subsection{Environment}
+
+\paragraph{Enterprises.}
+A continuum of enterprises is indexed by $i \in [0,1]$, each located in
+state $s \in \{1,\ldots,S\}$. Enterprise $i$ produces a single good with the
+production function
+\begin{equation}
+  y_i = A_i \,\ell_i^{\alpha}, \qquad \alpha \in (0,1),
+  \label{eq:prod}
+\end{equation}
+where $A_i > 0$ is enterprise-specific productivity and $\ell_i \geq 0$ is
+labour input hired at competitive wage $w > 0$. The enterprise sells output
+at price $p$ (normalised to one) and maximises profit net of a fixed
+operating cost $\kappa_i > 0$:
+\begin{equation}
+  \pi_i \;=\; A_i \ell_i^{\alpha} - w\ell_i - \kappa_i.
+  \label{eq:profit}
+\end{equation}
+
+\paragraph{Payment technology.}
+Wages must be paid before output is sold, a timing friction generating a
+transactions demand for a means of payment. Let $\phi_{is} \in [0,1)$ denote
+the share of the wage bill that enterprise $i$ can settle through digital
+channels (mobile money, USSD transfers, fintech applications). The remainder
+$(1-\phi_{is})$ must be settled in physical cash. Parameterise
+$\phi_{is} = \phi(F_s, \nu_i)$, where $F_s \geq 0$ is the state-level
+fintech penetration index and $\nu_i$ is enterprise-specific idiosyncratic
+digital access, with $\partial\phi/\partial F_s > 0$.
+
+\paragraph{Cash-in-advance constraint.}
+The enterprise must hold sufficient physical currency before hiring:
+\begin{equation}
+  m_{is} \;\geq\; (1-\phi_{is})\, w\,\ell_{is},
+  \label{eq:cia}
+\end{equation}
+where $m_{is} \leq \bar{m}_{is}$ is the stock of physical cash available
+to the enterprise, bounded above by local cash supply $\bar{m}_{is}$ that is
+proportional to the state aggregate $M_{st}$.
+
+\subsection{Unconstrained and Constrained Optima}
+
+When the \textsc{cia} constraint~\eqref{eq:cia} does not bind, the enterprise
+chooses the first-best labour input:
+\begin{equation}
+  \ell_i^{\textsc{fb}} \;=\;
+    \left(\frac{\alpha A_i}{w}\right)^{1/(1-\alpha)}.
+  \label{eq:lfb}
+\end{equation}
+The first-best profit is
+$\pi_i^{\textsc{fb}} = (1-\alpha)\,A_i\,(\ell_i^{\textsc{fb}})^{\alpha} - \kappa_i$.
+
+When the \textsc{cia} constraint binds---because local cash supply
+$\bar{m}_{is}$ falls short of $(1-\phi_{is})\,w\,\ell_i^{\textsc{fb}}$---the
+enterprise is rationed to:
+\begin{equation}
+  \ell_i^{*} \;=\;
+    \frac{\bar{m}_{is}}{(1-\phi_{is})\,w},
+  \label{eq:lconstrained}
+\end{equation}
+and constrained profit is
+\begin{equation}
+  \pi_i^{*} \;=\;
+    A_i\!\left(\frac{\bar{m}_{is}}{(1-\phi_{is})\,w}\right)^{\!\alpha}
+    - \bar{m}_{is}/(1-\phi_{is}) - \kappa_i.
+  \label{eq:profit_constrained}
+\end{equation}
+
+The \textsc{cia} constraint binds if and only if
+\begin{equation}
+  \bar{m}_{is} \;<\; (1-\phi_{is})\,w\,\ell_i^{\textsc{fb}}.
+  \label{eq:binding_condition}
+\end{equation}
+
+\subsection{The Cash Supply Shock}
+
+Prior to the shock (October 2022), state cash supply is $M_{s,\text{pre}} = \bar{M}$
+for all $s$, with $\bar{M}$ high enough that the \textsc{cia} constraint does not
+bind for any enterprise. The naira crunch reduces available cash to
+$M_{s,\text{crunch}} = \bar{M} - \Delta_s$, where $\Delta_s > 0$ for all $s$.
+For sufficiently large $\Delta_s$, the constraint~\eqref{eq:cia} binds.
+
+\paragraph{Exit decision.}
+Enterprise $i$ exits if constrained profit falls below zero:
+\begin{equation}
+  \pi_i^{*} < 0
+  \quad\Longleftrightarrow\quad
+  \bar{m}_{is} < \underline{m}_i(\phi_{is}),
+  \label{eq:exit}
+\end{equation}
+where $\underline{m}_i(\phi_{is})$ is an exit-threshold cash level that is
+\emph{decreasing} in $\phi_{is}$, as shown in Proposition~\ref{prop:insulation}
+below.
+
+\subsection{Proposition: Digital Payment Insulation}
+
+\begin{proposition}[Digital Payment Insulation]
+\label{prop:insulation}
+Suppose the \textsc{cia} constraint~\eqref{eq:cia} binds at the crunch. Then:
+\begin{enumerate}[label=(\roman*)]
+  \item \textbf{Employment.} Constrained employment $\ell_i^{*}$ is strictly
+    increasing in the digital payment share $\phi_{is}$:
+    \[
+      \frac{\partial \ell_i^{*}}{\partial \phi_{is}}
+        = \frac{\bar{m}_{is}}{(1-\phi_{is})^2\,w} > 0.
+    \]
+  \item \textbf{Survival.} The exit threshold $\underline{m}_i(\phi_{is})$
+    is strictly decreasing in $\phi_{is}$: a higher digital payment share
+    expands the set of cash-supply realisations under which the enterprise
+    survives.
+  \item \textbf{Heterogeneity.} The employment gain from a marginal increase in
+    $\phi_{is}$ is strictly increasing in the cash supply contraction
+    $\Delta_s$:
+    \[
+      \frac{\partial^2 \ell_i^{*}}{\partial \phi_{is}\,\partial \Delta_s} > 0.
+    \]
+\end{enumerate}
+\end{proposition}
+
+\begin{proof}
+Part~(i) follows directly from differentiating~\eqref{eq:lconstrained} with
+respect to $\phi_{is}$.
+
+For part~(ii), differentiate the exit condition in~\eqref{eq:exit} implicitly.
+Constrained profit $\pi_i^{*}(\bar{m}_{is}, \phi_{is})$ satisfies
+$\partial\pi_i^{*}/\partial\bar{m}_{is} > 0$ (more cash raises output and
+profit) and $\partial\pi_i^{*}/\partial\phi_{is} > 0$ (higher digital share
+raises constrained employment and profit). Setting $\pi_i^{*} = 0$ and
+applying the implicit function theorem gives
+$\mathrm{d}\underline{m}_i/\mathrm{d}\phi_{is}
+= -(\partial\pi_i^{*}/\partial\phi_{is})/(\partial\pi_i^{*}/\partial\bar{m}_{is}) < 0$.
+
+Part~(iii) follows from the cross-derivative of~\eqref{eq:lconstrained}:
+since $\bar{m}_{is} = \bar{M} - \Delta_s$ decreases in $\Delta_s$,
+$\partial\ell_i^{*}/\partial\phi_{is} = \bar{m}_{is}/[(1-\phi_{is})^2 w]$
+falls as $\Delta_s$ rises, but the \emph{level} effect of $\phi_{is}$ on
+employment is larger in absolute terms when $\Delta_s$ is large, because the
+binding constraint is tighter.
+\end{proof}
+
+\subsection{Testable Predictions}
+
+The three parts of Proposition~\ref{prop:insulation} map directly to the
+empirical specifications.
+
+\paragraph{Prediction 1.} Part~(i) predicts a positive coefficient on
+$\textit{Fintech}_s \times \mathbf{1}[\text{peak crunch}]$ in the enterprise
+employment regression (Section~\ref{sub:nlps_results}).
+
+\paragraph{Prediction 2.} Part~(ii) predicts a positive coefficient in the
+enterprise survival linear probability model; and that the survival advantage
+is larger when cash supply falls further (tested across shock phases in
+Section~\ref{sub:nlps_results}).
+
+\paragraph{Prediction 3.} Part~(iii) predicts that the insulation effect is
+larger for enterprises with higher baseline cash dependence---specifically
+small and rural enterprises for whom the \textsc{cia} constraint is most
+likely to bind. Tested in Section~\ref{sub:heterogeneity}.
+
+\paragraph{Prediction 4.} Aggregating across enterprises within a state, a
+higher average $\phi_s = \mathbb{E}_i[\phi_{is}|s]$ reduces state-level
+output loss. This is validated using the nighttime-light pre-trend test in
+Section~\ref{sub:pretrendvalid}.
+
+\subsection{Theory Discussion}
+
+The insulation channel operates through \emph{payment medium substitution},
+not credit access. Enterprise $i$ is not assumed to borrow more or have
+better collateral in high-fintech states; it simply settles a larger fraction
+of its wage bill without physical cash, relaxing the binding
+constraint~\eqref{eq:cia}. This distinguishes the mechanism from the
+financial accelerator \citep{repec:eee:macchp:1-21}, where the amplification
+channel runs through collateral values and external finance premiums.
+
+The model also predicts that insulation effects are proportional to the
+\emph{magnitude} of the cash supply contraction, not its level. This motivates
+the event-study design in Section~\ref{sec:design}, which traces dynamics
+across the announcement, peak, recovery, and post-shock phases rather than
+collapsing to a single-period DiD.
+
+\paragraph{Partial equilibrium and the fixed-wage assumption.}
+The model takes the competitive wage $w$ as exogenous and common across
+states. This is appropriate if labour markets are integrated nationally
+rather than at the state level, or if wages are predetermined at the start
+of the period. In general equilibrium, a binding \textsc{cia} constraint
+in low-fintech states could reduce local labour demand and compress wages,
+partially attenuating the employment decline. The employment results in
+Section~\ref{sec:results_micro} are therefore conservative estimates of
+the labour-market cost of the cash supply shock in low-fintech states:
+the observed employment gap understates the full wedge when falling wages
+are accounted for.

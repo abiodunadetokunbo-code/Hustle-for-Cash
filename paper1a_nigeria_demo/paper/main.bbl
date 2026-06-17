@@ -1,0 +1,160 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Aker et~al.(2016)Aker, Boumnijel, McClelland, and
+  Tierney]{aker2016payment}
+Jenny~C. Aker, Rachid Boumnijel, Amanda McClelland, and Niall Tierney.
+\newblock Payment mechanisms and antipoverty programs: {E}vidence from a mobile
+  money cash transfer experiment in {N}iger.
+\newblock \emph{Economic Development and Cultural Change}, 65\penalty0
+  (1):\penalty0 1--37, 2016.
+
+\bibitem[Allen et~al.(2016)Allen, Demirguc-Kunt, Klapper, and
+  Peria]{allen2016foundations}
+Franklin Allen, Asli Demirguc-Kunt, Leora Klapper, and Maria Soledad~Martinez
+  Peria.
+\newblock The foundations of financial inclusion: {U}nderstanding ownership and
+  use of formal accounts.
+\newblock \emph{Journal of Financial Intermediation}, 27:\penalty0 1--30, 2016.
+
+\bibitem[Alvarez and Lippi(2009)]{Alvarez2009}
+Fernando Alvarez and Francesco Lippi.
+\newblock Financial innovation and the transactions demand for cash.
+\newblock \emph{Econometrica}, 77\penalty0 (2):\penalty0 363--402, 2009.
+\newblock \doi{https://doi.org/10.3982/ECTA7451}.
+\newblock URL \url{https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA7451}.
+
+\bibitem[Alvarez et~al.(2022)Alvarez, Argente, and Lippi]{alvarez2022monetary}
+Fernando Alvarez, David Argente, and Francesco Lippi.
+\newblock A monetary mechanism.
+\newblock \emph{Journal of Political Economy}, 130\penalty0 (8):\penalty0
+  2086--2138, 2022.
+
+\bibitem[Beck et~al.(2007)Beck, Demirguc-Kunt, and Levine]{beck2007finance}
+Thorsten Beck, Asli Demirguc-Kunt, and Ross Levine.
+\newblock Finance, inequality and the poor.
+\newblock \emph{Journal of Economic Growth}, 12\penalty0 (1):\penalty0 27--49,
+  2007.
+
+\bibitem[Bernanke et~al.(1999)Bernanke, Gertler, and
+  Gilchrist]{repec:eee:macchp:1-21}
+Ben~S. Bernanke, Mark Gertler, and Simon Gilchrist.
+\newblock The financial accelerator in a quantitative business cycle framework.
+\newblock In \emph{Handbook of Macroeconomics}, volume~1 of \emph{Handbook of
+  Macroeconomics}, chapter~21, pages 1341--1393. Elsevier, 1 edition, None
+  1999.
+\newblock \doi{None}.
+\newblock URL \url{https://ideas.repec.org/h/eee/macchp/1-21.html}.
+
+\bibitem[Br\"{u}derle and Hodler(2018)]{bruederle2019nighttime}
+Anna Br\"{u}derle and Roland Hodler.
+\newblock Nighttime lights as a proxy for human development at the local level.
+\newblock \emph{PLOS ONE}, 13\penalty0 (9), 2018.
+
+\bibitem[Burgess and Pande(2005)]{burgess2005rural}
+Robin Burgess and Rohini Pande.
+\newblock Do rural banks matter? {E}vidence from the {I}ndian social banking
+  experiment.
+\newblock \emph{American Economic Review}, 95\penalty0 (3):\penalty0 780--795,
+  2005.
+
+\bibitem[{Central Bank of Nigeria}(2022)]{cbn2022circular}
+{Central Bank of Nigeria}.
+\newblock Redesign of the {N}aira: {P}ress release and policy circular.
+\newblock Policy circular, Central Bank of Nigeria, 2022.
+
+\bibitem[Chodorow-Reich et~al.(2019)Chodorow-Reich, Gopinath, Mishra, and
+  Narayanan]{chodorow2020cash}
+Gabriel Chodorow-Reich, Gita Gopinath, Prachi Mishra, and Abhinav Narayanan.
+\newblock Cash and the economy: {E}vidence from {I}ndia's demonetization.
+\newblock \emph{The Quarterly Journal of Economics}, 135\penalty0 (1):\penalty0
+  57--103, 2019.
+
+\bibitem[Donaldson and Storeygard(2016)]{donaldson2016view}
+Dave Donaldson and Adam Storeygard.
+\newblock The view from above: {A}pplications of satellite data in economics.
+\newblock \emph{Journal of Economic Perspectives}, 30\penalty0 (4):\penalty0
+  171--198, 2016.
+
+\bibitem[Gibson et~al.(2020)Gibson, Olivia, and Boe-Gibson]{gibson2020night}
+John Gibson, Susan Olivia, and Geua Boe-Gibson.
+\newblock Night lights in economics: {S}ources and uses.
+\newblock \emph{Journal of Economic Surveys}, 34\penalty0 (5):\penalty0
+  955--980, 2020.
+
+\bibitem[Henderson et~al.(2012)Henderson, Storeygard, and
+  Weil]{henderson2012measuring}
+J.~Vernon Henderson, Adam Storeygard, and David~N. Weil.
+\newblock Measuring economic growth from outer space.
+\newblock \emph{American Economic Review}, 102\penalty0 (2):\penalty0
+  994--1028, 2012.
+
+\bibitem[Hjort and Poulsen(2019)]{hjort2019arrival}
+Jonas Hjort and Jonas Poulsen.
+\newblock The arrival of fast {I}nternet and employment in {A}frica.
+\newblock \emph{American Economic Review}, 109\penalty0 (3):\penalty0
+  1032--1079, 2019.
+
+\bibitem[{International Monetary Fund}(2022)]{IMF2022FAS}
+{International Monetary Fund}.
+\newblock Financial access survey 2022 trends and developments: The continued
+  shift toward digital financial services.
+\newblock Technical report, International Monetary Fund, 2022.
+\newblock URL
+  \url{https://data.imf.org/-/media/iData/External-Storage/Documents/C5129CB005C94AF6898DF1725A28EE51/en/2022-FAS-Trends-and-Developments.pdf}.
+\newblock Accessed 17 June 2026.
+
+\bibitem[Jack and Suri(2014)]{jack2014risk}
+William Jack and Tavneet Suri.
+\newblock Risk sharing and transactions costs: {E}vidence from {K}enya's mobile
+  money revolution.
+\newblock \emph{American Economic Review}, 104\penalty0 (1):\penalty0 183--223,
+  2014.
+
+\bibitem[Lahiri(2020)]{lahiri2020demonetization}
+Amartya Lahiri.
+\newblock The great {I}ndian demonetization.
+\newblock \emph{Journal of Economic Perspectives}, 34\penalty0 (1):\penalty0
+  55--74, 2020.
+
+\bibitem[Lucas and Stokey(1987)]{lucas1987money}
+Robert~E. Lucas and Nancy~L. Stokey.
+\newblock Money and interest in a cash-in-advance economy.
+\newblock \emph{Econometrica}, 55\penalty0 (3):\penalty0 491--513, 1987.
+
+\bibitem[Mbiti and Weil(2016)]{MbitiWeil2016}
+Isaac Mbiti and David~N. Weil.
+\newblock Mobile banking: The impact of m-pesa in kenya.
+\newblock In Sebastian Edwards, Simon Johnson, and David~N. Weil, editors,
+  \emph{African Successes, Volume III: Modernization and Development}, pages
+  247--294. University of Chicago Press, 2016.
+
+\bibitem[Rambachandran and Roth(2023)]{rambachandran2023pretrends}
+Ashesh Rambachandran and Jonathan Roth.
+\newblock A more credible approach to parallel trends.
+\newblock \emph{Review of Economic Studies}, 90\penalty0 (5):\penalty0
+  2555--2591, 2023.
+
+\bibitem[Rogoff(2015)]{rogoff2015costs}
+Kenneth~S. Rogoff.
+\newblock Costs and benefits to phasing out paper currency.
+\newblock \emph{NBER Macroeconomics Annual}, 29\penalty0 (1):\penalty0
+  445--456, 2015.
+
+\bibitem[Suri and Jack(2016)]{suri2016mobile}
+Tavneet Suri and William Jack.
+\newblock The long-run poverty and gender impacts of mobile money.
+\newblock \emph{Science}, 354\penalty0 (6317):\penalty0 1288--1292, 2016.
+
+\bibitem[Wooldridge(2023)]{wooldridge2021two}
+Jeffrey~M. Wooldridge.
+\newblock Two-way fixed effects, the two-period {DiD}, and event studies.
+\newblock \emph{Journal of Econometrics}, 236\penalty0 (2):\penalty0 105514,
+  2023.
+\newblock \doi{10.1016/j.jeconom.2022.04.003}.
+
+\end{thebibliography}

@@ -1,0 +1,107 @@
+%% Section 3: Related Literature
+
+\section{Related Literature}
+\label{sec:literature}
+
+This paper contributes to four bodies of work as it relates to the economic effects of
+cash supply shocks, the role of digital payment technology in developing
+economies, the theory of money and payment systems, and the use of satellite
+nighttime lights as a high-frequency economic indicator.
+
+\subsection{Cash Supply Shocks and Currency Policy}
+
+The empirical literature on cash supply shocks is anchored by India's
+November 2016 demonetisation, when the government abruptly invalidated
+86 percent of the currency in circulation. \citet{chodorow2020cash} exploit
+geographic distribution of demonetized versus newly printed 
+bank notes across India's districts, and find that districts with fewer
+bank branches and higher cash reliance experienced significantly larger
+declines in economic activity, measured by nighttime lights and formal
+employment. In sub-Saharan Africa specifically in Nigeria, a relevant margin of 
+financial access is  digital
+payment technology that operates independently of physical branch
+infrastructure. This motivates the focus of this study on a fintech-based
+treatment variable and isolates a \emph{digital payment substitution channel}.
+
+\citet{lahiri2020demonetization} provides a complementary macroeconomic
+accounting of the 2016 episode, documenting that the GDP cost was concentrated
+in the informal sector and in the months immediately following the shock.
+\citet{rogoff2015costs} argues that the aggregate macroeconomic benefits of
+reducing paper currency use are substantial.  Evidence from this current study points to an
+important asymmetry where reducing cash dependence through digital payment adoption is
+welfare-improving, but an abrupt withdrawal of currency without sufficient
+digital infrastructure to substitute imposes large real costs concentrated in
+the least financially included segments of the economy.
+
+\subsection{Digital Payments and Financial Inclusion}
+
+The literature has established the welfare effects of mobile money and digital
+payment technology in low-income settings. \citet{jack2014risk} provide the
+foundational causal evidence from Kenya's M-Pesa system, showing that mobile
+money enables households to share risk more effectively and smooth consumption
+against income shocks. \citet{suri2016mobile} extend this to long-run poverty
+outcomes, finding that mobile money adoption increased per-capita consumption
+and reduced poverty, with larger effects for female-headed households.
+\citet{MbitiWeil2016} finds that increased use of M-Pesa lowers the propensity to use informal savings 
+mechanisms and raises the likelihood of being banked.
+
+In West Africa, \citet{aker2016payment} evaluate a mobile-money
+cash transfer programme in Niger and find significant reductions in transaction
+costs and improvements in household welfare relative to traditional payment
+channels. These studies establish that digital payment access provides direct
+welfare benefits through risk-sharing and consumption smoothing. The
+contribution of this study is to identify digital payment
+infrastructure as a stabiliser that insulates the real economy
+from disruptions in the supply of physical currency. This channel operates at
+the state level rather than the household level and is distinct from the
+individual-level welfare gains that had been shown in earlier studies.
+
+Financial inclusion literature, \citet{beck2007finance},
+\citet{allen2016foundations}, \citet{burgess2005rural}, had shown  that access
+to formal financial services promotes household welfare and firm productivity
+through credit access, risk management, and reduced transaction costs. The
+naira crunch episode allows us to estimate the value of financial
+infrastructure through its performance under stress, when infrastructure 
+serves as a substitute for a disrupted payments medium.
+
+\subsection{Monetary Theory and Payment Technology}
+
+The theoretical positioning for a digital-payment substitution channel can be traced
+to the cash-in-advance (\textsc{cia}) tradition originating with
+\citet{lucas1987money}. In these models, a subset of transactions must be financed with liquid balances 
+held prior to purchase. Consequently, an unexpected reduction in the availability of currency tightens 
+liquidity constraints, restricts transactions, and reduces economic activity. 
+Building on \citet{Alvarez2009} that show that financial innovation lowers the demand for transaction balances by reducing 
+reliance on cash, access to digital payment technologies can be interpreted as relaxing transaction-related 
+liquidity constraints. Enabling some transactions to be settled electronically rather than with physical currency, 
+digital payment systems reduce dependence on cash as the sole medium of exchange. In the context of a cash shortage, 
+agents with greater access to digital payment technologies should 
+therefore be better able to maintain transactions and economic activity.
+
+The empirical design of this study operationalises this mechanism at the subnational level.
+States with higher pre-shock fintech adoption have, in aggregate, a lower
+dependence on physical currency for transaction settlement; when cash supply
+contracts, the real \textsc{cia} constraint binds less severely in these
+states. Section~\ref{sec:theory} formalises this intuition and derives the
+testable predictions that the empirical sections evaluate.
+
+\subsection{Satellite Nighttime Lights as Economic Measurement}
+
+High-frequency satellite data have become a complement to official
+statistics where administrative data are unavailable at monthly or subnational
+resolution. \citet{henderson2012measuring} establish the foundational result
+that nighttime-light radiance reliably proxies economic activity, especially
+for countries with weak national accounts. \citet{donaldson2016view} survey
+applications in economics ranging from road infrastructure to conflict
+detection. \citet{gibson2020night} discuss appropriate uses and limitations,
+including sensitivity to cloud cover, overglow, and saturation in dense urban
+areas. \citet{bruederle2019nighttime} validate nighttime lights as a proxy for
+local human development across Africa, supporting their use in the
+sub-Saharan context.
+
+For this paper, a contribution of the \textsc{nasa} \VIIRS{} Black Marble
+product is not as a primary outcome but as an identification tool. The 45
+pre-shock monthly observations of LGA-level luminosity (January 2019 to
+September 2022) permit a test of parallel trends in the state-level
+fintech treatment variable, validating the identifying assumption for
+the firm-level specifications in Section~\ref{sec:results_micro}.

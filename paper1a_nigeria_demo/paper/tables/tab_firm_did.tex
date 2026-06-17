@@ -1,0 +1,36 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+    & \multicolumn{2}{c}{Active} & \multicolumn{2}{c}{Log sales} & Workers \\ 
+   Dependent Variables: & \multicolumn{2}{c}{active} & \multicolumn{2}{c}{ln\_sales} & n\_workers\\
+   Model:                             & (1)            & (2)            & (3)            & (4)            & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   Fintech $\times$ R7 (peak crunch)  & 0.0171$^{**}$  & 0.0171$^{**}$  & 0.0184         & 0.0184         & 0.2940$^{***}$\\   
+                                      & (0.0076)       & (0.0076)       & (0.0847)       & (0.0847)       & (0.0550)\\   
+   Fintech $\times$ R11 (medium run)  & 0.0769$^{***}$ & 0.0769$^{***}$ & 0.3149$^{***}$ & 0.3149$^{***}$ &   \\   
+                                      & (0.0192)       & (0.0192)       & (0.0925)       & (0.0925)       &   \\   
+   Enterprise FE                      & \checkmark     & \checkmark     & \checkmark     & \checkmark     & \checkmark\\   
+   Round FE                           & \checkmark     & \checkmark     & \checkmark     & \checkmark     & \checkmark\\   
+   Rural control                      & No             & Yes            & No             & Yes            & No\\  
+   \midrule
+   \emph{Fixed-effects}\\
+   hh\_f                              & Yes            & Yes            & Yes            & Yes            & Yes\\  
+   round                              & Yes            & Yes            & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                       & 5,269          & 5,269          & 3,482          & 3,482          & 3,084\\  
+   R$^2$                              & 0.68987        & 0.68987        & 0.42580        & 0.42580        & 0.51830\\  
+   Within R$^2$                       & 0.01309        & 0.01309        & 0.00530        & 0.00530        & 0.03387\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (state\_f) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Sample: non-farm household enterprises active in NLPS Round 5 (August 2022 pre-shock baseline). Round 5 is the omitted baseline. Fintech is the standardised state-level digital payment index from NLPS Round 6 (October 2022). Workers only available for R5 and R7. Standard errors clustered at the state level. Inference robustness: see Appendix Table~\ref{atab:inference_robustness}.
+\par\endgroup
+
+

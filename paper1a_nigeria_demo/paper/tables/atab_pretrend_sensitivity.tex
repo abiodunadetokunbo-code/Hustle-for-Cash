@@ -1,0 +1,24 @@
+\begin{table}[H]
+\begin{threeparttable}
+\caption{Pre-Trend Sensitivity: Honest Confidence Intervals for the NTL Treatment Effect}
+\label{atab:pretrend_sensitivity}
+\small
+\begin{tabular}{lllcc}
+\toprule
+$M$ & 95\% CI on $\hat{\beta}_{\text{peak}}$ & 95\% CI on $\hat{\beta}_{k=14}$ & Peak $>0$ & $k{=}14$ $>0$ \\
+\midrule
+0.0000 & [-0.0135, 0.0390] & [-0.0658, -0.0109] & No & No \\
+0.0001 $\leftarrow$ obs.\ gradient & [-0.0139, 0.0394] & [-0.0671, -0.0096] & No & No \\
+0.0001 $\leftarrow$ obs.\ gradient & [-0.0143, 0.0398] & [-0.0684, -0.0082] & No & No \\
+0.0002 $\leftarrow$ obs.\ gradient & [-0.0147, 0.0402] & [-0.0698, -0.0069] & No & No \\
+0.0003 & [-0.0151, 0.0406] & [-0.0711, -0.0056] & No & No \\
+0.0003 & [-0.0155, 0.0410] & [-0.0724, -0.0043] & No & No \\
+0.0004 & [-0.0160, 0.0415] & [-0.0742, -0.0025] & No & No \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item \textit{Notes:} Sensitivity analysis in the spirit of \citet{rambachandran2023pretrends}. $M$ is the maximum allowed per-period (monthly) deviation from parallel trends. For each $M$, the honest confidence interval is computed as $[\hat{\beta}_k - 1.96 \hat{\sigma}_k - M \cdot |k - k_{\text{ref}}|,\;\hat{\beta}_k + 1.96 \hat{\sigma}_k + M \cdot |k - k_{\text{ref}}|]$, where $k_{\text{ref}} = -6$ (August 2022, the omitted reference period). The observed pre-period gradient is $M_{\text{obs}} = 0.0001$. $M^* = -0.0023$ is the violation required to make the lower bound exactly zero at the peak crunch period. The ratio $M^*/M_{\text{obs}} = -21.64$ indicates the pre-trend gradient would need to be amplified by this factor to overturn the NTL result. The firm-level pre-trend is validated separately via the NTL pre-period window; household and enterprise fixed effects in the firm panel absorb all time-invariant heterogeneity, making the firm-level estimates more robust to this concern.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

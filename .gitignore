@@ -1,0 +1,25 @@
+# Data (too large for git)
+paper1a_nigeria_demo/data/
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.lof
+*.lot
+*.bak
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.blg
+
+# Test compilation outputs
+paper1a_nigeria_demo/paper/main_test*
+paper1a_nigeria_demo/paper/main_test2*
+paper1a_nigeria_demo/paper/main_test3*
+
+# R session artifacts
+.Rhistory
+.RData
+.Rproj.user/

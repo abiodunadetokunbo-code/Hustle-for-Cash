@@ -1,0 +1,17 @@
+\begin{table}[H]
+\begin{threeparttable}
+\caption{Baseline Balance: Fintech and Pre-Shock Enterprise Characteristics}
+\label{atab:balance}
+\small\begin{tabular}{lcccc}
+\toprule
+Baseline characteristic & Coef. & SE & $p$-value & $N$ \\
+\midrule
+Log weekly sales (R5) & -0.0317 & 0.0528 & 0.552 & 1842 \\
+Enterprise workers (R5) & -0.0780 & 0.0299 & 0.013** & 1842 \\
+Rural enterprise & 0.0374 & 0.0470 & 0.431 & 1842 \\
+Small firm & 0.0734 & 0.0215 & 0.002*** & 1842 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Cross-sectional OLS at Round 5 (Aug 2022) baseline. Dependent variable is the listed enterprise characteristic. Regressor is the standardised state-level fintech index ($\textit{Fintech}_s$) measured in NLPS Round 6 (October 2022, 11 days before the CBN announcement). No fixed effects; standard errors clustered at the state level. Log weekly sales and rural location are balanced across the fintech distribution. Enterprise workers and small-firm status show statistically significant associations: high-fintech states have fewer enterprise workers ($p = 0.013$) and a higher share of small firms ($p = 0.002$) at baseline. These imbalances are absorbed by enterprise fixed effects in the main specification (equation~\ref{eq:firm}), which identifies off within-enterprise changes across rounds rather than cross-sectional differences. The heterogeneity results in Section~\ref{sub:heterogeneity} explicitly examine whether effects differ by firm size.
+\end{tablenotes}\end{threeparttable}\end{table}

@@ -1,0 +1,31 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcc}
+   \tabularnewline \midrule \midrule
+                                & (1)      & (2) \\   
+   Dependent Variable: & \multicolumn{2}{c}{fintech\_std}\\
+   Model:                       & (1)      & (2)\\  
+   \midrule
+   \emph{Variables}\\
+   Constant                     & -0.9895  & -0.5092\\   
+                                & (1.009)  & (1.014)\\   
+   Log road dist.\ to hub (km)  & 0.2016   & 0.0960\\   
+                                & (0.2027) & (0.2052)\\   
+   Terrain ruggedness (std.)    &          & 0.4295$^{*}$\\   
+                                &          & (0.2390)\\   
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                 & 37       & 37\\  
+   R$^2$                        & 0.02749  & 0.11183\\  
+   Adjusted R$^2$               & -0.00029 & 0.05958\\  
+   \midrule \midrule
+   \multicolumn{3}{l}{\emph{IID standard-errors in parentheses}}\\
+   \multicolumn{3}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Cross-sectional OLS. Dependent variable: standardised fintech index (state level, NLPS Round 6). Road distance is the log km from each state centroid to the nearest qualifying financial hub. TRI is the mean terrain ruggedness index. Both instruments fail the relevance condition ($F<10$) and exhibit the wrong sign (states farther from hubs have higher fintech, reflecting the leapfrog dynamic documented in Appendix Table~\ref{atab:leapfrog}). Heteroskedasticity-robust standard errors.
+\par\endgroup
+
+

@@ -1,0 +1,19 @@
+\begin{table}[H]
+\begin{threeparttable}
+\caption{Survivor Selection and the Sales Null: Pre-Shock Sales by Fintech Tercile}
+\label{atab:sales_decomp}
+\small\begin{tabular}{lcccc}
+\toprule
+Fintech group & Survived to R7 & Exited by R7 & Difference & $N$ (surv/exit) \\
+\midrule
+Low fintech & 10.806 & 10.645 & 0.162 & 519 / 115 \\
+Mid fintech & 10.594 & 10.928 & -0.334 & 508 / 133 \\
+High fintech & 10.556 & 11.031 & -0.475 & 487 / 80 \\
+\midrule
+Interaction coef.\ (survived $\times$ fintech): & \multicolumn{3}{c}{-0.1699} & \\
+$p$-value: & \multicolumn{3}{c}{0.131} & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Mean log weekly sales at Round 5 (Aug 2022 pre-shock baseline) for enterprises that survived to R7 vs.\ those that had exited, by fintech tercile. If the log-sales null result at R7 reflects positive survivor selection in low-fintech states, the survival premium (survived minus exited) should be \emph{larger} in the Low fintech group. The interaction coefficient from OLS of R5 sales on survival status interacted with the continuous fintech index tests this formally; a negative coefficient would confirm stronger positive selection in low-fintech states. Standard errors clustered at the state level.
+\end{tablenotes}\end{threeparttable}\end{table}

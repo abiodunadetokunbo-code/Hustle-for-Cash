@@ -1,0 +1,39 @@
+
+\begingroup
+\centering
+\begin{tabular}{lccccc}
+   \tabularnewline \midrule \midrule
+    & Employed & \multicolumn{2}{c}{Food insecure} & Food worry & Food runout \\ 
+   Dependent Variables: & employed & \multicolumn{2}{c}{food\_insecure} & food\_worry & food\_runout\\
+   Model:                             & (1)             & (2)         & (3)         & (4)           & (5)\\  
+   \midrule
+   \emph{Variables}\\
+   Fintech $\times$ R11 (medium run)  & -0.0423$^{***}$ &             &             &               &   \\   
+                                      & (0.0145)        &             &             &               &   \\   
+   Fintech index (std.)               &                 & -0.0083     & -0.0111     & -0.0308$^{*}$ & -0.0164\\   
+                                      &                 & (0.0143)    & (0.0152)    & (0.0159)      & (0.0152)\\   
+   Sample                             & Panel R5--R11   & R7 peak     & R7 peak     & R7 peak       & R7 peak\\  
+   Household FE                       & \checkmark      & ---         & ---         & ---           & ---\\  
+   Zone FE                            & ---             & \checkmark  & \checkmark  & \checkmark    & \checkmark\\   
+   Round FE                           & \checkmark      & ---         & ---         & ---           & ---\\  
+   Rural ctrl.                        & No              & No          & Yes         & Yes           & Yes\\  
+   \midrule
+   \emph{Fixed-effects}\\
+   hh\_f                              & Yes             &             &             &               & \\  
+   round                              & Yes             &             &             &               & \\  
+   zone\_f                            &                 & Yes         & Yes         & Yes           & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                       & 4,658           & 1,138       & 1,138       & 1,138         & 1,138\\  
+   R$^2$                              & 0.63024         & 0.01475     & 0.01611     & 0.01833       & 0.02050\\  
+   Within R$^2$                       & 0.00717         & 0.00015     & 0.00154     & 0.00328       & 0.00258\\  
+   \midrule \midrule
+   \multicolumn{6}{l}{\emph{Clustered (state\_f) standard-errors in parentheses}}\\
+   \multicolumn{6}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Col (1): household wage-employment DiD (R5 Aug 2022 to R11 Apr 2024) with household FE. The negative coefficient indicates high-fintech states saw larger declines in formal wage employment, consistent with a composition shift toward self-employment in surviving enterprises (documented in Table~\ref{tab:firm_did}). Cols (2)--(5): food insecurity cross-section at R7 (peak crunch, Feb 2023). Treatment is state-level fintech index; zone FE (6 zones) absorb broad regional differences; state FE cannot be included as they are collinear with state-level treatment. Food insecure = 1 if household worried about or ran out of food in past month (FIES items). Cross-sections are descriptive; no household pre-period baseline is available. Standard errors clustered at the state level.
+\par\endgroup
+
+

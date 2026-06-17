@@ -1,0 +1,147 @@
+%% Section 3: Data
+
+\section{Data}
+\label{sec:data}
+
+\subsection{Nighttime Light Intensity: VIIRS Black Marble}
+\label{sub:viirs}
+
+Monthly nighttime-light (\NTL) radiance from the \textsc{nasa} Black Marble
+product VNP46A3 \citep{donaldson2016view} provides the pre-trend validation
+panel. Composites were processed through Google Earth Engine and aggregated
+to LGA boundaries using the GeoBoundaries ADM2 shapefile for Nigeria. The
+full panel covers 774 LGAs and 72 months (January~2019--December~2024),
+yielding 55,728 observations; the 45 pre-shock months (January~2019 to
+September~2022) are used for the parallel-trends validation in
+Section~\ref{sub:pretrendvalid}. The study uses the
+\textsc{NearNadir\_Composite\_Snow\_Free} layer, which is optimal for
+equatorial and tropical regions. The pre-trend regression outcome is
+$\ln(\NTL_{lt} + 1)$, where $l$ indexes LGA and $t$ indexes month-year;
+the level shift by one accommodates zero-radiance observations without
+distorting the distribution.
+
+Nighttime lights are an established proxy for local economic activity in
+settings where standard GDP data are unavailable at high spatial or temporal
+frequency \citep{henderson2012measuring,gibson2020night}. Their key advantage
+for the pre-trend test is comprehensive coverage: every LGA in every month is
+observed without the attrition and non-response that affect survey-based
+measures, providing a clean 45-month pre-shock window over which the
+parallel-trends assumption can be tested.
+\citet{bruederle2019nighttime} validate \NTL{} as a proxy
+for human development at the district level in Sub-Saharan Africa.
+
+\subsection{Pre-Shock Digital Payment Adoption: NLPS Round 6}
+\label{sub:fintech}
+
+The treatment variable is constructed from the Nigeria Living Standards
+Phone Survey (\NLPS) Round~6, fielded by the National Bureau of Statistics
+between October~14 and October~16, 2022, eleven days before the \CBN{}
+announcement. Round~6 includes a financial services module (Section~5) that
+asks each household whether, in the prior month, it used each of eight
+financial service categories: (1)~pension or formal insurance, (2)~securities
+or investment products, (3)~mobile money accounts (OPay, PalmPay, MTN
+MoMo), (4)~microfinance bank or cooperative accounts, (5)~commercial bank
+accounts, (6)~mobile phone or \textsc{ussd} banking, (7)~mobile banking
+applications, and (8)~credit cards.
+
+The study constructs a household-level binary for each category and aggregate to the
+state level, yielding the penetration rate for each service. The composite
+\emph{fintech index} is the simple average of the four digital-payment
+subcategories: mobile money, commercial bank accounts, mobile or \textsc{ussd}
+banking, and mobile banking applications.\footnote{%
+  I exclude pension/insurance, securities, microfinance, and credit card
+  because their penetration is below 4\% in all states and they do not
+  represent a meaningful cash substitute during the crunch. Including them
+  does not materially affect results; see Appendix~Table~\ref{atab:alt_treatment}.}
+The index is standardised to mean zero and unit standard deviation across
+states before entering regressions.
+
+The pre-announcement timing of Round~6 is critical for identification. Round~7
+(February~2023, peak crunch) shows statistically significant changes in
+financial service usage relative to Round~6 across all four digital-payment
+categories, with mobile money usage increasing by 8.3 percentage points and
+\textsc{ussd} banking by 12.7 percentage points as households urgently
+sought cash alternatives. This confirms that the Round~6 measure captures
+a pre-shock equilibrium rather than forward-looking adjustment to an
+anticipated shock.
+
+\subsection{Firm-Level Outcomes: NLPS Enterprise Modules}
+\label{sub:nlps_enterprise}
+
+Thirteen rounds of the \NLPS{} were conducted between August~2021 and
+July~2024, providing a longitudinal household panel with an embedded
+enterprise module. Three rounds are central to this study:
+
+\begin{itemize}[noitemsep]
+  \item \textbf{Round~5 (August~2022):} Pre-shock baseline, two months
+    before the \CBN{} announcement. Captures enterprise sales, employment,
+    and activity status before any anticipation effects.
+  \item \textbf{Round~7 (February~2023):} Peak-crunch contemporaneous
+    survey. Directly measures enterprise outcomes during the most acute
+    cash shortage.
+  \item \textbf{Round~11 (April~2024):} Medium-run follow-up, 14~months
+    after the peak. Assesses recovery and persistence.
+\end{itemize}
+
+In this study, a \emph{household enterprise} is defined as any non-farm, income-generating
+activity operated by a member of the surveyed household, regardless of
+registration status, encompassing sole proprietorships, family-run retail
+stalls, artisanal workshops, and service micro-businesses. This definition
+follows the \NLPS{} protocol, which classifies as a household enterprise any
+activity from which the household derives income, excluding wage employment
+and agricultural cultivation.
+
+The enterprise module in each round records whether a household operates a
+non-farm enterprise, the primary sector, weekly sales or revenues, and the
+number of enterprise workers. The sample is restricted to households with a consistent
+enterprise identifier across rounds. Section~\ref{sec:results_micro} presents
+the sample characteristics.
+
+\subsection{Pre-Existing Firm Characteristics: WBES 2014 and 2025}
+\label{sub:wbes}
+
+The World Bank Enterprise Survey (\WBES) provides two cross-sections of
+formal-sector firms in Nigeria: 2,676 firms across 19 states in 2014, and
+1,043 firms across six geopolitical zones in 2025.\footnote{%
+  The 2025 survey was fielded February--September~2025, approximately two
+  years after the peak crunch. The two waves are treated as independent
+  cross-sections at the zone level.}
+
+From the 2014 cross-section, the study constructs three state-level
+pre-shock firm characteristics that capture heterogeneous exposure to a
+cash-supply shock:
+\begin{enumerate}[noitemsep]
+  \item $\textit{Pct\_Unbanked}_s$: share of sampled firms with no checking
+    or savings account (\WBES{} variable \texttt{k6}). Firms with no bank
+    account must conduct all transactions in physical cash and have no
+    buffers when cash is unavailable.
+  \item $\textit{Pct\_No\_Credit}_s$: share of firms without an active loan
+    or line of credit (\texttt{k8}). Credit-constrained firms cannot bridge
+    a revenue shortfall during the shock.
+  \item $\textit{Pct\_FinObstacle}_s$: share of firms rating access to
+    finance as a major or very severe obstacle to operations (\texttt{k30}).
+\end{enumerate}
+This study combines these into a \emph{finance-exclusion} cash-dependence index as
+the simple mean of the three indicators. Appendix~\ref{asec:wbes_construction}
+describes construction and robustness to alternative aggregations.
+The 2025 cross-section supplies post-shock zone-level outcomes for the
+long-run analysis in Section~\ref{sec:longrun}.
+
+\subsection{Geographic Instruments}
+\label{sub:instruments}
+
+Two geographic instruments for pre-shock fintech adoption were constructed:
+road distance to the nearest financial hub (over the 2022 OpenStreetMap road
+network) and terrain ruggedness (mean \textsc{tri} from the \textsc{srtm}
+90-metre digital elevation model, following \citealt{hjort2019arrival}).
+Construction details and first-stage results are reported in
+Appendix~Table~\ref{atab:iv_firststage}; Section~\ref{sub:iv} explains why
+both instruments fail the relevance condition and are excluded from the
+primary analysis.
+
+\subsection{Summary Statistics}
+
+Table~\ref{tab:summary} reports summary statistics for the main estimation
+samples.
+
+\input{tables/tab_summary_stats}

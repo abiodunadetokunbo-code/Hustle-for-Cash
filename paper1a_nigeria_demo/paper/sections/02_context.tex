@@ -1,0 +1,138 @@
+%% Section 2: Institutional Context
+
+\section{The Naira Crunch: Institutional Context}
+\label{sec:context}
+
+\subsection{The Policy Shock}
+
+On October~26, 2022, the Central Bank of Nigeria (\CBN) announced the
+redesign of its three highest-denomination banknotes (₦200, ₦500, and
+₦1,000) and set a January~31, 2023 deadline for old notes to be
+deposited and replaced \citep{cbn2022circular}. Daily ATM withdrawals
+were capped at ₦20,000 (approximately \$43 at the prevailing
+rate) and over-the-counter withdrawals at ₦100,000 per week.
+The stated rationale was to combat counterfeiting, reduce the volume
+of currency held outside the banking system, and accelerate the
+adoption of digital payments in support of the \CBN's broader
+cashless-economy agenda.
+
+The roll-out of new notes proved severely inadequate to demand. By
+mid-January 2023, queues outside commercial banks and ATMs stretched
+for hours across major Nigerian cities. Reports from the field and
+media documentation consistently describe near-total unavailability
+of new notes in rural areas, with POS machines dysfunctional and
+markets at a standstill.\footnote{%
+  The \emph{NBS Enterprise Telephone Survey}, \emph{SBM Intelligence}
+  rapid surveys, and contemporaneous New Agency of Nigeria \emph{NAN} wire reports provide
+  granular documentation. These sources are not used for
+  identification; they motivate the timing of the shock indicators.}
+The naira crunch was by this point a genuine constraint on economic
+activity, not merely an inconvenience.
+
+In February 2023 Supreme Court of Nigeria ruled that old notes must
+remain legal tender until December 2023, providing partial relief.
+Concurrently, the \CBN{} accelerated distribution of new currency.
+By mid-2023 most commercial channels had normalised, though
+\NLPS{} survey evidence (Round~11, April 2024) and the 2025 \WBES{}
+both indicate persistent behavioural shifts in payment habits.
+
+Table~\ref{tab:shock_timeline} summarises the shock timeline.
+
+\begin{table}[H]
+\begin{threeparttable}
+\caption{Naira Crunch: Policy Timeline}
+\label{tab:shock_timeline}
+\small
+\begin{tabularx}{\textwidth}{lX}
+\toprule
+\textbf{Date} & \textbf{Event} \\
+\midrule
+October 26, 2022
+  & \CBN{} announces naira redesign; caps daily ATM withdrawals
+    at ₦20,000; sets January 31 deadline for old notes. \\[4pt]
+November--December 2022
+  & Transition period: old notes recalled, new notes printed but
+    distribution severely below demand. Early shortages in
+    smaller cities and rural areas. \\[4pt]
+January--February 2023
+  & \emph{Peak crunch}: near-complete ATM dry-outs in many states;
+    hour-long bank queues; POS network failures; informal market
+    disruption. \\[4pt]
+February 8, 2023
+  & Supreme Court orders old notes remain legal tender;
+    \CBN{} given three weeks to increase note supply. \\[4pt]
+March--June 2023
+  & Gradual recovery as new note circulation increases;
+    cash availability improves progressively by state. \\[4pt]
+July 2023 onward
+  & Post-crunch: cash supply normalised in most states;
+    some permanent shift toward digital payment habits
+    documented in subsequent surveys. \\
+\bottomrule
+\end{tabularx}
+\begin{tablenotes}
+\footnotesize
+\item \textit{Notes:} Timeline constructed from \CBN{} official
+  circulars, Supreme Court records, and National Bureau of Statistics
+  rapid-survey documentation. Shock indicator periods follow this
+  timeline exactly; see Section~\ref{sec:design} for period definitions.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsection{Nigeria's Payment Landscape}
+\label{sub:payment_landscape}
+
+Understanding why fintech adoption creates differential exposure
+requires appreciating Nigeria's payment infrastructure at the time of
+the shock. According to the 2021 \emph{Global Findex}, approximately
+45 percent of Nigerian adults held a formal bank account, well below
+South Africa (85\%).
+Bank branch density is heavily concentrated in Lagos, Abuja, Port
+Harcourt, and Kano; many northern and rural states have fewer than
+two commercial bank branches per 100,000 inhabitants \citep{IMF2022FAS}.
+
+Against this low-baseline context, fintech adoption expanded rapidly
+between 2018 and 2022. Three developments are particularly relevant.
+First, mobile money operators (notably OPay and PalmPay) scaled
+their agent networks aggressively, reaching peri-urban and rural
+areas bypassed by traditional banking. Second, the \CBN{}'s
+mandatory tier-1 Know-Your-Customer (\textsc{kyc}) relaxation in 2018
+lowered barriers to opening mobile wallets. Third, \textsc{ussd} banking
+(dialling a short code to transact without internet) penetrated widely
+through the mobile network operator infrastructure.
+
+A concern is whether these \CBN{}-directed policies render fintech
+adoption endogenous to the 2022 crunch that if states that responded most to
+the 2018 \textsc{kyc} relaxation were also anticipating a cashless policy,
+the pre-shock fintech index might proxy for policy expectations rather than
+exogenous infrastructure variation. Three features of the episode address
+this concern. First, the specific form of the 2022 shock, a forced currency
+redesign combined with withdrawal caps, was not a predictable consequence of
+the 2018 \textsc{kyc} relaxation; the two episodes are legally and operationally
+distinct, separated by four years. Second, the \NLPS{} Round~6 financial
+service module, conducted 11~days before the announcement, directly records
+\emph{realised} adoption, not plans or expectations. Also, the comparison of
+Round~6 to Round~7 (February 2023) shows significant changes in financial
+service usage, confirming agents had not positioned in advance. Third,
+cross-state variation in fintech take-up shows differential adoption of
+mobile infrastructure, driven by geography, agent-network rollout costs, and
+pre-existing mobile penetration, rather than differential anticipation of
+currency policy, as the geographic analysis in Section~\ref{sub:iv} shows.
+
+By October 2022, the \NLPS{} Round~6 financial services module
+(conducted 11 days before the \CBN{} announcement) recorded the
+following state-level averages. 14.7 percent of households held a
+commercial bank account; 86.2 percent had used mobile phone or
+\textsc{ussd} banking; 5.9 percent held a mobile money account;
+and 5.1 percent used a mobile banking application. The composite
+fintech index, the simple average of the four digital-payment
+categories, ranged from 19.8\,\% (Oyo) to 40.5\,\% (Taraba) across
+states, providing the cross-sectional variation the identification exploits.
+
+States with low fintech penetration are not simply poorer.
+Appendix~Table~\ref{atab:fintech_correlates} shows that the
+state-level fintech index is uncorrelated with pre-2022
+nighttime light intensity ($r = -0.19$) and with pre-trend \NTL{}
+growth ($r = 0.10$), supporting the parallel-trends assumption
+formalised in Section~\ref{sec:design}.

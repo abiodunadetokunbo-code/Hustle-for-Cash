@@ -1,0 +1,33 @@
+\begin{table}
+\centering
+\caption{Differential Effect of Pre-Shock Fintech Adoption on Nighttime Lights}
+\centering
+\begin{tabular}[t]{lcccc}
+\toprule
+  & Baseline & State trends & WBES states & NTL control\\
+\midrule
+Fintech \$\textbackslash{}times\$ Announcement & \num{0.010} & \num{-0.018}*** & \num{-0.018} & \num{0.008}\\
+ & (\num{0.014}) & (\num{0.005}) & (\num{0.011}) & (\num{0.013})\\
+Fintech \$\textbackslash{}times\$ Transition & \num{0.018} & \num{-0.012} & \num{-0.021} & \num{0.016}\\
+ & (\num{0.018}) & (\num{0.010}) & (\num{0.024}) & (\num{0.017})\\
+Fintech \$\textbackslash{}times\$ Peak crunch & \num{0.019} & \num{-0.013} & \num{-0.023} & \num{0.017}\\
+ & (\num{0.015}) & (\num{0.008}) & (\num{0.015}) & (\num{0.014})\\
+Fintech \$\textbackslash{}times\$ Recovery & \num{0.039}** & \num{0.003} & \num{0.010} & \num{0.038}**\\
+ & (\num{0.018}) & (\num{0.007}) & (\num{0.017}) & (\num{0.017})\\
+Fintech \$\textbackslash{}times\$ Post-shock & \num{0.002} & \num{-0.047}** & \num{-0.021}*** & \num{0.001}\\
+ & (\num{0.010}) & (\num{0.019}) & (\num{0.006}) & (\num{0.009})\\
+Baseline NTL \$\textbackslash{}times\$ Post &  &  &  & \num{-0.020}\\
+ &  &  &  & (\num{0.042})\\
+\midrule
+State FE & Yes & Yes & Yes & Yes\\
+Month-Year FE & Yes & Yes & Yes & Yes\\
+State trends & No & Yes & No & No\\
+Pre-NTL ctrl. & No & No & No & Yes\\
+States & 37 & 37 & 19 & 37\\
+Observations & \num{2664} & \num{2664} & \num{1224} & \num{2664}\\
+\$R\textasciicircum{}2\$ & \num{0.931} & \num{0.940} & \num{0.955} & \num{0.932}\\
+\bottomrule
+\multicolumn{5}{l}{\rule{0pt}{1em}* p $<$ 0.1, ** p $<$ 0.05, *** p $<$ 0.01}\\
+\multicolumn{5}{l}{\rule{0pt}{1em}Dependent variable: $textbackslash{}ln(textbackslash{}text{NTL}_{st}+1)$. Treatment is the standardised state-level fintech index from NLPS Roundtextasciitilde{}6 (Oct 2022). Period definitions follow Tabletextasciitilde{}1; pre-shock is the omitted category. Column (2) adds a state-specific linear time trend (state $textbackslash{}times$ month index). Column (3) restricts to the 19 states with 2014 WBES coverage. Column (4) adds baseline mean NTL interacted with a post-announcement indicator. Standard errors clustered at the state level. $textasciicircum{}{***}p<0.01$, $textasciicircum{}{**}p<0.05$, $textasciicircum{}{*}p<0.10$.}\\
+\end{tabular}
+\end{table}

@@ -1,0 +1,33 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                                      & Rural          & Urban          & Small          & Large \\   
+   Dependent Variable: & \multicolumn{4}{c}{active}\\
+   Model:                             & (1)            & (2)            & (3)            & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Fintech $\times$ R7 (peak crunch)  & 0.0263$^{**}$  & 0.0004         & 0.0379$^{**}$  & -0.0065\\   
+                                      & (0.0103)       & (0.0134)       & (0.0154)       & (0.0099)\\   
+   Fintech $\times$ R11 (medium run)  & 0.0771$^{***}$ & 0.0700$^{***}$ & 0.0750$^{***}$ & 0.0698$^{***}$\\   
+                                      & (0.0212)       & (0.0188)       & (0.0209)       & (0.0245)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   hh\_f                              & Yes            & Yes            & Yes            & Yes\\  
+   round                              & Yes            & Yes            & Yes            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                       & 3,765          & 1,504          & 2,497          & 2,772\\  
+   R$^2$                              & 0.67312        & 0.73562        & 0.67448        & 0.70521\\  
+   Within R$^2$                       & 0.01137        & 0.01629        & 0.01201        & 0.01309\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (state\_f) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Dependent variable: enterprise active (binary). Split-sample estimates. Small = below-median workers at R5 baseline. Standard errors clustered at state level.
+\par\endgroup
+
+

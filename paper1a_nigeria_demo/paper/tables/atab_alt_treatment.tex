@@ -1,0 +1,37 @@
+
+\begingroup
+\centering
+\begin{tabular}{lcccc}
+   \tabularnewline \midrule \midrule
+                                  & Baseline (4-svc) & All 8 services & Payments only\\(mobile+USSD)   & Bank acct only \\   
+   Dependent Variable: & \multicolumn{4}{c}{ln\_ntl\_mean}\\
+   Model:                         & (1)              & (2)            & (3)                            & (4)\\  
+   \midrule
+   \emph{Variables}\\
+   Fintech (4-svc) $\times$ Peak  & 0.0189           &                &                                &   \\   
+                                  & (0.0154)         &                &                                &   \\   
+   All-8 $\times$ Peak            &                  & 0.0315         &                                &   \\   
+                                  &                  & (0.0248)       &                                &   \\   
+   Payments-only $\times$ Peak    &                  &                & -0.0020                        &   \\   
+                                  &                  &                & (0.0128)                       &   \\   
+   Bank acct $\times$ Peak        &                  &                &                                & 0.0256\\   
+                                  &                  &                &                                & (0.0153)\\   
+   \midrule
+   \emph{Fixed-effects}\\
+   state                          & Yes              & Yes            & Yes                            & Yes\\  
+   date\_fct                      & Yes              & Yes            & Yes                            & Yes\\  
+   \midrule
+   \emph{Fit statistics}\\
+   Observations                   & 2,664            & 2,664          & 2,664                          & 2,664\\  
+   R$^2$                          & 0.93148          & 0.93147        & 0.93083                        & 0.93126\\  
+   Within R$^2$                   & 0.01016          & 0.01001        & 0.00086                        & 0.00705\\  
+   \midrule \midrule
+   \multicolumn{5}{l}{\emph{Clustered (state) standard-errors in parentheses}}\\
+   \multicolumn{5}{l}{\emph{Signif. Codes: ***: 0.01, **: 0.05, *: 0.1}}\\
+\end{tabular}
+ 
+\par \raggedright 
+Peak crunch period coefficient only. All specifications include state and month-year FEs. Column (3) uses only mobile money and USSD/mobile banking (the two categories most directly substitutable for cash during the crunch). Clustered SEs at the state level.
+\par\endgroup
+
+

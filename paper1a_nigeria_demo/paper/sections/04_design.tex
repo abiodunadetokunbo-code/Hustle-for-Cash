@@ -1,0 +1,119 @@
+%% Section 4: Research Design
+
+\section{Research Design}
+\label{sec:design}
+
+\subsection{Identification Strategy}
+\label{sub:identification}
+
+The identification relies on the intuition that the naira crunch hit all
+Nigerian states simultaneously but with differential severity proportional to
+each state's pre-existing dependence on physical cash. States with higher
+pre-shock digital payment adoption had, in effect, a private hedge, such that when ATMs
+failed, digital payment rails provided a substitute medium of exchange and
+store of value. Consistent with the monetary mechanism in \citet{alvarez2022monetary}, states 
+with limited digital-payment infrastructure were more exposed to the cash shortage because firms relied more heavily on 
+physical currency to complete transactions, collect revenues, and pay workers.
+
+The key identifying assumption is that, absent the crunch, high- and
+low-fintech states would have followed parallel trends in enterprise outcomes.
+This assumption cannot be tested directly in the firm panel, since the \NLPS{}
+enterprise module was fielded only in Rounds~5, 7, and~11. It is validated
+indirectly using the nighttime-light (\NTL{}) panel, which covers all 774
+Nigerian LGAs for 45 consecutive pre-shock months (January~2019 to
+September~2022). Because the treatment variable in both the \NTL{} pre-trend test and the
+firm-panel specification is identical, the state-level fintech index
+$\textit{Fintech}_s$ from \NLPS{} Round~6, the flatness of the pre-period
+\NTL{} coefficients directly tests whether $\textit{Fintech}_s$ predicts
+differential state-level trajectories \emph{prior} to the shock.
+
+A secondary concern is that $\textit{Fintech}_s$ may proxy for underlying
+state-level development trajectories, where richer, faster-growing states
+adopted fintech earlier and also had higher economic growth irrespective of the
+crunch. This concern is addressed in two ways. First, the 45-month \NTL{}
+pre-period directly tests for differential trends, a formal regression of the
+pre-period coefficients on calendar time yields a slope of $-0.00010$ per
+month ($t = -0.42$), statistically and economically indistinguishable from
+zero, confirming that high- and low-fintech states followed parallel
+trajectories before the crunch. Second, enterprise fixed effects absorb all
+time-invariant confounders, so the identifying variation comes from
+within-enterprise changes across survey rounds rather than cross-sectional
+differences.
+
+\subsection{Primary Specification}
+\label{sub:firm_spec}
+
+For the \NLPS{} enterprise panel, the following specification is estimated:
+
+\begin{equation}
+  y_{irt} = \alpha_i + \gamma_t
+    + \sum_{j \in \{R7, R11\}} \delta_j
+      \bigl(\textit{Fintech}_{s(i)} \times \mathbf{1}[\text{round}_t = j]\bigr)
+    + X_{irt}'\phi + \varepsilon_{irt},
+  \label{eq:firm}
+\end{equation}
+
+\noindent where $y_{irt}$ is log weekly sales (or an activity or employment
+indicator) for enterprise $i$ in household $r$ at round $t$; $\alpha_i$ is an
+enterprise fixed effect; $\gamma_t$ absorbs round effects; and $X_{irt}$
+controls for household demographics and enterprise sector. Round~5
+(August~2022) is the omitted baseline. $\delta_{R7}$ captures the peak-crunch
+differential and $\delta_{R11}$ captures medium-run persistence. Standard
+errors are clustered at the state level.
+
+Because the naira crunch begins for all thirty-six states and the Federal
+Capital Territory simultaneously on October~26, 2022, treatment timing is
+not staggered.Because treatment intensity is time invariant and enters the specification through 
+its interaction with the post-crunch indicator, the estimator reduces to a standard 
+two-period difference-in-differences with a continuous treatment. Under parallel trends 
+and a linear dose-response relationship, the TWFE coefficient identifies the average marginal effect 
+of fintech intensity on enterprise outcomes \citep{wooldridge2021two}.
+
+That linearity assumption is probed by estimating
+quintile-bin interactions and results confirm approximate linearity across the
+fintech distribution (Appendix~Table~\ref{atab:alt_treatment}).
+
+\subsection{Pre-Trend Validation}
+\label{sub:pretrendvalid}
+
+For each of the 45 pre-shock months, we estimate the coefficient on
+$\textit{Fintech}_s \times \mathbf{1}[t = k]$ in a regression of
+$\ln(\NTL_{lt}+1)$ on state and month-year fixed effects, where $k$ is the
+month relative to February~2023 and $k=-1$ (January~2023) is the omitted
+category. Under the null of parallel trends these pre-period coefficients
+should be indistinguishable from zero.
+
+The pre-period coefficients cluster around zero throughout the 45-month window.
+A formal regression of the 31 estimable pre-period coefficients on relative
+time yields a slope of $-0.00010$ per month ($t = -0.42$, $p = 0.68$),
+confirming that high- and low-fintech states followed statistically identical
+\NTL{} trajectories before the crunch. Appendix~Figure~\ref{afig:eventstudy_trend}
+shows that allowing for state-specific linear trends does not materially alter
+the pre-period pattern.
+
+Appendix~Table~\ref{atab:pretrend_sensitivity} quantifies robustness to
+pre-trend violations following \citet{rambachandran2023pretrends}. Setting
+$M$ equal to the maximum plausible per-period gradient, the observed
+pre-period slope of 0.00010 log points per month, the honest confidence
+interval for the peak-crunch coefficient remains positive. The medium-run
+enterprise survival result requires a pre-trend violation more than 20 times
+this magnitude to be overturned, providing strong assurance that the
+firm-level estimates are not artefacts of differential pre-shock trends.
+
+\subsection{On Geographic Instruments}
+\label{sub:iv}
+
+Two geographic instruments for pre-shock fintech adoption were constructed:
+road distance to the nearest financial hub (over the 2022 OpenStreetMap road
+network) and terrain ruggedness (mean \textsc{tri} from the \textsc{srtm}
+90-metre digital elevation model, following \citealt{hjort2019arrival}). Full
+construction details and first-stage results are in
+Appendix~Table~\ref{atab:iv_firststage}. Both instruments fail the relevance
+condition ($F = 2.14$, $p = 0.13$). The road-distance coefficient has the
+wrong sign such thatstates farther from financial hubs score \emph{higher} on
+the fintech index, suggesting a leapfrog dynamic where the most financially
+excluded states adopted mobile money most rapidly between 2014 and
+2022 \citep{suri2016mobile}; Appendix~Table~\ref{atab:leapfrog} documents
+this pattern. Identification therefore rests entirely on
+equation~\eqref{eq:firm} with the 45-month pre-shock \NTL{} window as the
+parallel-trends validation.

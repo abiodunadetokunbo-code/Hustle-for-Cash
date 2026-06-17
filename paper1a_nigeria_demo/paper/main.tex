@@ -1,0 +1,171 @@
+%% Hustle for Cash: Evidence from Nigeria's Naira Crunch
+%% Main file — compile with pdflatex
+%% All table notes via threeparttable; figure notes via floatrow
+%% Never cut a note off the bottom of a float.
+
+\documentclass[12pt]{article}
+
+% ── Typography and layout ──────────────────────────────────────────────────────
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{microtype}
+\usepackage{lmodern}
+
+% ── Maths ─────────────────────────────────────────────────────────────────────
+\usepackage{amsmath,amssymb,amsthm}
+
+% ── Tables ────────────────────────────────────────────────────────────────────
+\usepackage{booktabs}
+\usepackage{threeparttable}   % keeps notes with their table, never orphaned
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{dcolumn}          % decimal-aligned columns
+\usepackage{siunitx}
+\sisetup{
+  table-format          = -2.3,
+  table-number-alignment = center,
+  group-separator       = {,}
+}
+\usepackage{tabularx}
+
+% ── Figures ───────────────────────────────────────────────────────────────────
+\usepackage{graphicx}
+\usepackage{floatrow}         % \floatfoot keeps notes inside figure floats
+\floatsetup[figure]{capposition=bottom}
+\floatsetup[table]{style=plaintop}
+\usepackage{subcaption}
+\usepackage{caption}
+\captionsetup{
+  font=small,
+  labelfont=bf,
+  labelsep=period,
+  skip=6pt
+}
+
+% ── Float placement ───────────────────────────────────────────────────────────
+\usepackage{float}
+\usepackage{placeins}         % \FloatBarrier
+
+% ── Hyperlinks ────────────────────────────────────────────────────────────────
+\usepackage[
+  colorlinks = true,
+  linkcolor  = black,
+  citecolor  = black,
+  urlcolor   = blue
+]{hyperref}
+
+% ── Bibliography ──────────────────────────────────────────────────────────────
+\usepackage{natbib}
+\bibliographystyle{plainnat}   % author-year citations via natbib
+\setcitestyle{authoryear,open={(},close={)}}
+
+% ── Miscellaneous ─────────────────────────────────────────────────────────────
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{pdflscape}        % landscape pages for wide tables
+\usepackage{afterpage}
+\usepackage{appendix}
+
+% ── Theorem environments ──────────────────────────────────────────────────────
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+% ── Custom commands ───────────────────────────────────────────────────────────
+\newcommand{\std}[1]{\ensuremath{(#1)}}          % std errors below coeff
+\newcommand{\placeholder}[1]{\textcolor{red}{[#1]}}  % fill-in markers
+\newcommand{\VIIRS}{\textsc{viirs}}
+\newcommand{\NLPS}{\textsc{nlps}}
+\newcommand{\WBES}{\textsc{wbes}}
+\newcommand{\NTL}{\textsc{ntl}}
+\newcommand{\CBN}{\textsc{cbn}}
+\newcommand{\naira}{%
+  \mbox{N\kern-.55em\raisebox{.35ex}{\rule{.5em}{.4pt}}\kern.05em}}
+
+% ─────────────────────────────────────────────────────────────────────────────
+
+\begin{document}
+
+% ── Title page ────────────────────────────────────────────────────────────────
+\title{%
+  Hustle for Cash:\\
+  Evidence from Nigeria's Naira Crunch%
+}
+
+\author{%
+  Abiodun Adetokunbo%
+  \thanks{%
+    Augustine University, Lagos, Nigeria.
+    E-mail: \href{mailto:abiodun.adetokunbo@augustineuniversity.edu.ng}%
+      {abiodun.adetokunbo@augustineuniversity.edu.ng}.%
+  }%
+}
+
+
+\date{\today}
+\maketitle
+\thispagestyle{empty}
+
+% ── Abstract ──────────────────────────────────────────────────────────────────
+\begin{abstract}
+\noindent
+When Nigeria's central bank abruptly withdrew currency in late 2022 and capped
+cash withdrawals, the resulting shortage, the \emph{naira crunch}, created
+a sharp, unanticipated cash supply shock. This paper exploits cross-state
+variation in pre-shock digital payment adoption, measured eleven days before
+the policy announcement, to estimate the real costs of the crunch and the
+insulating role of financial infrastructure. Using enterprise modules from the
+Nigeria Living Standards Phone Survey (1,842 household enterprises across three
+rounds), with the parallel-trends assumption validated through a 45-month
+pre-shock nighttime-light panel covering all 774 Nigerian local government
+areas, enterprises in states one standard deviation above the pre-shock fintech
+mean were 1.7 percentage points more likely to remain in operation at peak
+crunch and 7.7 percentage points more likely to survive fourteen months later.
+Employment effects are also large: 0.29 additional enterprise workers per
+standard deviation of fintech at peak crunch.
+Effects are concentrated in rural and small enterprises. The results identify
+digital financial infrastructure as a macroeconomic stabiliser against cash
+supply disruptions, with implications for central bank currency operations in
+low-income economies.
+
+\medskip
+\noindent
+\textbf{JEL codes:} E41, E52, G23, O16, O55
+
+\noindent
+\textbf{Keywords:} cash supply shock, digital payments, fintech, nighttime
+lights, Nigeria, demonetisation
+\end{abstract}
+
+\clearpage
+\setcounter{page}{1}
+
+% ── Sections ──────────────────────────────────────────────────────────────────
+\input{sections/01_intro}
+\input{sections/02_context}
+\input{sections/02b_literature}
+\input{sections/02c_theory}
+\input{sections/03_data}
+\input{sections/04_design}
+% Section 5 (Macro Results: Nighttime Lights) removed; NTL pre-trend
+% validation is now in Section 4 (sub:pretrendvalid).
+\input{sections/06_results_micro}
+\input{sections/07_longrun}
+\input{sections/08_conclusion}
+
+% ── References ────────────────────────────────────────────────────────────────
+\clearpage
+\bibliography{references}
+
+% ── Appendix ──────────────────────────────────────────────────────────────────
+\clearpage
+\begin{appendices}
+\input{sections/A_appendix}
+\end{appendices}
+
+\end{document}

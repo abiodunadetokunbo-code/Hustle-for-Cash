@@ -1,0 +1,154 @@
+%% Appendix
+
+\section{Data Construction Details}
+\label{asec:data_construction}
+
+\subsection{VIIRS Nighttime Lights}
+\label{asec:viirs_construction}
+
+The monthly \VIIRS{} composites were extracted via Google Earth Engine
+using the VNP46A3.001 product (NASA Black Marble Monthly). For each
+of the 774 geopolitical units in the GeoBoundaries Nigeria ADM2
+shapefile, the mean radiance of the \texttt{NearNadir\_Composite\_Snow\_Free}
+layer was computed over all cloud-free pixels within the LGA polygon.
+All regressions use the full panel; the NTL data serve as a pre-trend
+validation tool rather than a primary outcome.
+
+The LGA panel was merged to the GADM ADM1 (state) boundaries via
+spatial centroid join: the centroid of each geoBoundaries polygon
+was matched to its enclosing GADM state polygon, with a nearest-feature
+fallback for coastal LGAs whose centroid falls offshore.
+
+\subsection{Fintech Index Construction}
+\label{asec:fintech_construction}
+
+The composite fintech index is constructed from \NLPS{} Round~6
+Section~5 (financial services module). For each household $h$ in
+state $s$, binary indicators $d_{hj} \in \{0,1\}$ are constructed
+for whether the household used service category $j \in \{3,5,6,7\}$
+(mobile money, bank account, mobile/\textsc{ussd}, mobile app)
+in the previous month. The household-level index is
+$\textit{FintechIndex}_h = \frac{1}{4}\sum_{j} d_{hj}$, bounded in
+$[0,1]$. The state-level index is the mean across households:
+$\textit{Fintech}_s = \overline{\textit{FintechIndex}}_{h \in s}$.
+In regressions it is standardised to mean~0, \textsc{sd}~1 across
+states.
+
+\subsection{WBES Finance-Exclusion Index}
+\label{asec:wbes_construction}
+
+The firm-level cash-dependence index used in Section~\ref{sub:wbes_longrun}
+combines three binary indicators from the 2014 \WBES{}:
+$b_1 = \mathbf{1}[\texttt{k6} = \text{No}]$ (no checking or savings account),
+$b_2 = \mathbf{1}[\texttt{k8} = \text{No}]$ (no active loan or credit line),
+and $b_3 = \mathbf{1}[\texttt{k30} \geq \text{Major obstacle}]$.
+The firm-level index is $\textit{CashDep}_i = (b_1+b_2+b_3)/3$.
+State-level aggregates are simple means across sampled firms.
+
+\newpage
+
+\section{Additional Tables and Figures}
+\label{asec:additional}
+
+% ── Fintech correlates ─────────────────────────────────────────────────────────
+\input{tables/atab_fintech_correlates}
+
+\clearpage
+
+% ── Pre-trend sensitivity (NTL event study) ───────────────────────────────────
+\input{tables/atab_pretrend_sensitivity}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_pretrend_sensitivity.pdf}
+\caption{Pre-Trend Sensitivity Analysis}
+\label{afig:pretrend_sensitivity}
+\floatfoot{%
+  \textit{Notes:} Panel A plots the \NTL{} event-study coefficients with the
+  extrapolated pre-period trend line (dashed red). Panel B shows how the honest
+  confidence interval on the peak-crunch coefficient evolves as the allowed
+  per-period trend violation $M$ increases. The solid vertical line marks
+  $M^* = 0.00226$, the violation required to make the lower bound touch zero.
+  The dotted line marks the observed pre-period gradient $M_{\text{obs}} = 0.0001$.
+  See Appendix~Table~\ref{atab:pretrend_sensitivity} for full details.
+}
+\end{figure}
+
+\clearpage
+
+% ── State trend robustness ────────────────────────────────────────────────────
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figures/fig_eventstudy_trend.pdf}
+\caption{NTL Event Study: Baseline vs.\ State-Specific Linear Trend Robustness}
+\label{afig:eventstudy_trend}
+\floatfoot{%
+  \textit{Notes:} Both lines plot round-by-round coefficients on
+  $\textit{Fintech}_s \times \mathbf{1}[t=k]$ from a regression of
+  $\ln(\NTL_{lt}+1)$ on state and month-year fixed effects, for baseline
+  \textsc{twfe} (blue) and a specification that adds a state-specific linear
+  time trend (red, dashed). The pre-period gradient is near zero in both
+  specifications, validating the parallel-trends assumption. The
+  trend-adjusted model shows attenuated post-announcement coefficients,
+  reflecting the well-known sensitivity of state-trend specifications when
+  the trend is estimated over a sample window that includes the shock period.
+  Standard errors clustered at the state level.
+}
+\end{figure}
+
+\clearpage
+
+% ── Inference robustness ─────────────────────────────────────────────────────
+\input{tables/atab_inference_robustness}
+
+\clearpage
+
+% ── Baseline balance ─────────────────────────────────────────────────────────
+\input{tables/atab_balance}
+
+% ── Attrition test ────────────────────────────────────────────────────────────
+\input{tables/atab_attrition}
+
+\clearpage
+
+% ── Sales null decomposition ──────────────────────────────────────────────────
+\input{tables/atab_sales_decomp}
+
+\clearpage
+
+% ── Additional household outcomes ─────────────────────────────────────────────
+\begin{table}[H]
+\caption{Additional Household Outcomes: Wage Employment and Food Insecurity at Peak}
+\label{tab:additional_outcomes}
+\input{tables/tab_additional_outcomes}
+\end{table}
+
+\clearpage
+
+% ── IV first stage and leapfrog ───────────────────────────────────────────────
+\begin{table}[H]
+\caption{IV First Stage: Road Distance and Terrain Ruggedness}
+\label{atab:iv_firststage}
+\input{tables/atab_iv_firststage}
+\end{table}
+
+\clearpage
+
+\input{tables/atab_leapfrog}
+
+\clearpage
+
+\input{tables/atab_lagged_iv}
+
+\clearpage
+
+% ── Alternative treatment index definitions ───────────────────────────────────
+\begin{table}[H]
+\caption{Robustness: Alternative Treatment Definitions}
+\label{atab:alt_treatment}
+\input{tables/atab_alt_treatment}
+\end{table}
+
+\clearpage
+
+% Summary statistics appear in Table~\ref{tab:summary} of the main text (Section~\ref{sec:data}).

@@ -1,0 +1,20 @@
+\begin{table}[H]
+\begin{threeparttable}
+\caption{Firm-Level Inference Robustness: Pairs Bootstrap and Randomization Inference}
+\label{atab:inference_robustness}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+Outcome $\times$ Round & Coef. & Asy.\ SE & $p_{\text{asy}}$ & Boot.\ SE & $p_{\text{boot}}$ & $p_{\text{RI}}$ \\
+\midrule
+Enterprise active $\times$ R7 (peak crunch) & 0.0171 & 0.0076 & 0.030** & 0.0089 & 0.048** & 0.085* \\
+Enterprise active $\times$ R11 (medium run) & 0.0769 & 0.0192 & 0.000*** & 0.0225 & 0.004*** & 0.000*** \\
+Enterprise workers $\times$ R7 (peak crunch) & 0.2940 & 0.0550 & 0.000*** & 0.0659 & 0.002*** & 0.000*** \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\footnotesize
+\item \textit{Notes:} Each row reports inference for a focal hypothesis from the firm-level DiD specification (equation~\ref{eq:firm}). Coefficients are from Table~\ref{tab:firm_did}. Asy.\ SE: heteroskedasticity-robust SE clustered at the state level ($G=37$). Boot.\ SE: standard deviation of the coefficient across 999 pairs-bootstrap replications (states resampled with replacement). $p_{\text{boot}}$: fraction of centred bootstrap draws exceeding the observed absolute coefficient. $p_{\text{RI}}$: two-sided randomisation-inference $p$-value from 4999 permutations of the fintech index across states. $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.10$.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

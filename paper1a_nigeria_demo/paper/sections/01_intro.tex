@@ -1,0 +1,102 @@
+%% Section 1: Introduction
+
+\section{Introduction}
+\label{sec:intro}
+
+In late October 2022, Nigeria's central bank announced the withdrawal and
+redesign of its currency notes, together with strict daily caps on cash
+withdrawals. By January 2023, a rolling shortage of the replacement notes had
+produced hour-long queues outside commercial banks, paralysed point-of-sale
+terminals, and darkened markets where almost every transaction had always
+settled in cash. Prices for essential goods spiked and some small enterprises closed
+their doors. In February 2023 the Supreme Court ordered the old notes to remain
+legal tender, and the central bank progressively released more new currency
+over the following months. The episode, the \emph{naira crunch}, lasted
+approximately six months before cash supply normalised.
+
+The crunch was an abrupt, policy-induced cash supply shock where the stock of
+physical currency available for transactions fell sharply while the demand for
+cash-settled transactions did not. Its severity, however, varied substantially
+across Nigeria's thirty-six states and the Federal Capital Territory
+(\textsc{fct}), for a reason not immediately obvious at
+the time as some states had higher pre-shock adoption of digital
+payment technology. In those states, enterprises and households could substitute
+to mobile money wallets, USSD bank transfers, and fintech applications when
+ATMs ran dry. In states where most transactions still settled exclusively in
+cash, limited substitute existed.
+
+This paper exploits that cross-sectional heterogeneity to estimate the real
+costs of a cash supply shock and the extent to which digital financial
+infrastructure acts as a buffer. The identification relies on three features
+of the episode. First, the \CBN{} announcement on October~26, 2022 was
+genuinely unanticipated, making the pre-shock distribution of fintech
+adoption a predetermined variable uncontaminated by anticipation of the shock.
+Second, that distribution is measured using the Nigeria Living Standards
+Phone Survey (\NLPS) Round~6 which was conducted on October~15, 2022, eleven days
+before the announcement, providing a state-level index of digital payment
+penetration constructed from four digital-payment service categories.\footnote{%
+  The index uses four digital-payment categories: mobile money, commercial
+  bank accounts, mobile and \textsc{ussd} banking, and mobile banking
+  applications. Four further categories (pension/insurance, securities,
+  microfinance, and credit cards) are excluded because their penetration is
+  below 4\% in all states and they do not constitute a meaningful cash
+  substitute during the crunch; see Appendix~Table~\ref{atab:alt_treatment}
+  for robustness to alternative index definitions.
+  Section~\ref{sec:data} details the construction.}
+Third, the parallel-trends assumption is validated using monthly composites of
+nighttime-light radiance from the \textsc{nasa} \VIIRS{} Black Marble satellite
+product for all 774 Nigerian local government areas (January~2019 to
+September~2022), providing 45 consecutive pre-shock months over which
+high- and low-fintech states can be shown to have followed statistically
+identical trajectories prior to the crunch. Section~\ref{sec:design} details
+the identification strategy and pre-trend validation.
+
+The primary evidence comes from firm-level data.and the main findings are as follows.
+Enterprises in states one standard deviation above the pre-shock fintech
+mean were 1.7 percentage points more likely to remain in operation at the
+February 2023 peak crunch and 7.7 percentage points more likely
+to remain in operation fourteen months later in April 2024.
+Employment was also significantly insulated as high-fintech states had
+0.29 more enterprise workers during the peak crunch. 
+Effects are concentrated in rural firms and small enterprises below-median
+size, the units most dependent on daily cash flow.
+
+These results contribute to three literatures. First, they extend
+\citet{chodorow2020cash} to the mobile-money studies. \citet{chodorow2020cash} shows that
+Indian districts with fewer bank branches lost more economic activity during
+the 2016 demonetisation; the relevant margin in Sub-Saharan Africa is not bank
+branches, but digital payment technology.
+This paper identifies a \emph{digital payment substitution channel} that the
+India paper's design, which relies on bank-deposit variation, cannot isolate.
+The magnitude of the enterprise-survival estimates implies that closing the
+fintech adoption gap between the 10th- and 90th-percentile Nigerian states
+would have reduced firm exit at the peak crunch by approximately 5 percentage
+points, a substantial share of the 16-percentage-point decline in enterprise
+activity observed between Round~5 and Round~7.
+
+Second, this paper provides evidence for a digital-payment substitution mechanism 
+emphasized in the mobile-money literature. By enabling transactions and transfers to be 
+executed without physical currency, digital payment technologies reduce reliance on 
+cash and may attenuate the effects of cash-supply disruptions \citep{jack2014risk}. 
+The present study quantifies the extent of this insulation 
+in LMICs using plausibly exogenous pre-determined variation in fintech adoption. 
+
+
+Third, the analysis contributes to the emerging methodological literature on
+identifying monetary transmission in data-sparse economies by leveraging alternative proxies 
+for economic activity 
+\citep[see][]{henderson2012measuring,donaldson2016view}. High-frequency satellite
+imagery combined with granular phone survey data can recover real monetary
+transmission at subnational resolution where the formal national accounts
+provide limited quarterly or monthly benchmarks. The satellite--survey combination
+is directly replicable for other African central bank episodes.
+
+Section~\ref{sec:context} describes the naira crunch and Nigeria's payment
+landscape. Section~\ref{sec:literature} surveys the related literature.
+Section~\ref{sec:theory} presents the theoretical framework.
+Section~\ref{sec:data} introduces the data. Section~\ref{sec:design}
+presents the research design and validates the identifying assumption using
+the 45-month \NTL{} pre-trend window. Section~\ref{sec:results_micro} reports
+the firm-level results. Section~\ref{sec:longrun} examines longer-run effects
+using the 2025 World Bank Enterprise Survey and the April 2024 \NLPS{} round.
+Section~\ref{sec:conclusion} concludes with policy implications.
